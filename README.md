@@ -46,6 +46,7 @@ Must have:
 
 - Valid HTML
 - Valid CSS3
+- Valid JS (If any)
 - Your answers during review
 - UTF8 file encoding
 - Clean readable code
@@ -56,6 +57,7 @@ Nice to have (bonus points):
 - Bootstrap or other frameworks (Should detail why you are using it)
 - Setup script (if necessary)
 - Using SASS || LESS
+- Animations with CSS rather than JS
 - A git history (even if brief) with clear, concise commit messages.
 
 
