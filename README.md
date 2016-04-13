@@ -32,6 +32,10 @@ In the `./design/` folder you will find the .ai and .png that you will be implem
 
 - Header
   - Secondary menu (seen in the second slide of the homepage) slides down when you reach this second slide and should be fixed to the top. When scrolling up, if you reach slide 1 it should slide up.
+  
+- Content
+  - All content should be aligned to the center (vertically and horizontally)
+  - Each slide should cover the screen
 
 
 **Code must be in english**
