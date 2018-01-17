@@ -56,7 +56,8 @@ Nice to have (bonus points):
 - An informative, detailed description in the PR
 - Bootstrap or other frameworks (Should detail why you are using it)
 - Setup script (if necessary)
-- Using SASS || LESS
+- Using SASS
+- Using BEM Convention
 - Animations with CSS rather than JS
 - A git history (even if brief) with clear, concise commit messages.
 
