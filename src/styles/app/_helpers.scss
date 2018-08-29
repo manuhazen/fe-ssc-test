@@ -1,0 +1,25 @@
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate3D(-50%, -50%, 0);
+}
+
+.reset-button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+}
+
+.uppercase {
+    text-transform: uppercase !important;
+}

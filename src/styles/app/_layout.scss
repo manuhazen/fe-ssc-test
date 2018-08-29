@@ -1,0 +1,103 @@
+.section {
+    height: 100vh;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.first {
+        background-image: url('../images/background1.jpg');
+    }
+
+    &.second {
+        background-image: url('../images/background2.jpg');
+    }
+
+    &.third {
+        background-image: url('../images/background3.jpg');
+    }
+}
+
+.content {
+    width: 34em;
+    max-width: 100%;
+}
+
+.c-getstarted {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+
+    &__spotify-logo {
+        width: 50%;
+        margin: 6.25px 0;
+    }
+
+    &__soundclash-logo {
+        width: 100%;
+        margin: 12.5px 0;
+    }
+
+    &__punchline {
+        font-family: 'ProximaNova-Regular';
+        color: $white;
+        font-size: 18px;
+        margin-bottom: 12.5px;
+    }
+
+    &__maple {
+        @include flexbox();
+        @include align-items(center);
+        margin: 12.5px 0 25px 0;
+        img {
+            max-width: 34px;
+            padding: 0 12.5px;
+        }
+    }
+
+    &__divider {
+        width: 30px;
+        border-top: 1px solid $white;
+    }
+
+    &__input {
+        width: 75%;
+        padding: 16px 12px;
+        @include flexbox();
+        @include align-items(center);
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 12.5px 0 25px 0;
+
+        button {
+            height: 20px;
+            width: 20px;
+            color: $likeBlack;
+        }
+
+        input[type='text'] {
+            margin-left: 8px;
+            margin-right: auto;
+            border: none;
+            width: 85%;
+            color: $likeBlack;
+            font-family: 'ProximaNova-Regular';
+            font-size: 18px;
+            &::placeholder {
+                font-family: 'ProximaNova-Regular';
+                font-size: 17.2px;
+                color: $likeBlack;
+            }
+        }
+    }
+
+    &__cta {
+        margin: 12.5px 0;
+        font-family: 'ProximaNova-Regular';
+        font-size: 18px;
+        color: $white;
+        span {
+            font-family: 'ProximaNova-Bold'
+        }
+    }
+}
