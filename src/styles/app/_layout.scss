@@ -3,7 +3,7 @@
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    position: relative;
     &.first {
         background-image: url('../images/background1.jpg');
     }
@@ -20,6 +20,13 @@
 .content {
     width: 45em;
     max-width: 100%;
+    &-full {
+        margin: 0 auto;
+        width: 100%;
+    }
+    @media (max-width: 767px) {
+        width: auto;
+    }
 }
 
 .c-arrow {
@@ -28,7 +35,7 @@
         position: absolute;
         bottom: 25px;
         left: 50%;
-        @include translate3D(0, -50%, 0);
+        @include translate3D(-50%, 0, 0);
     }
 }
 
@@ -37,6 +44,9 @@
     @include flexbox();
     @include flex-direction(column);
     @include align-items(center);
+    @media (max-width: 767px) {
+        padding: 0 45px;
+    }
 
     &__spotify-logo {
         width: 50%;
@@ -54,6 +64,7 @@
         font-family: 'ProximaNova-Bold';
         color: $white;
         font-size: 18px;
+        text-align: center;
     }
 
     &__copy {
@@ -62,6 +73,7 @@
         color: $white;
         font-size: 18px;
         margin-top: 10px;
+        text-align: center;
     }
 
     &__maple {
@@ -83,6 +95,9 @@
         margin: 12.5px 0;
         @include flexbox();
         @include align-items(center);
+        @media (max-width: 767px) {
+            @include flex-direction(column);
+        }
         button {
             margin: 25px 12.5px;
             font-family: 'ProximaNova-Semibold';
@@ -100,8 +115,140 @@
                 background-color: white;
                 color: $likeBlack;
             }
+            @media (max-width: 767px) {
+                margin: 12.5px;
+            }
         }
     }
 
+
+}
+
+.c-howitworks {
+    &__title {
+        font-family: $proximaNovaLight;
+        color: $white;
+        font-size: 40px;
+        padding-bottom: 110px;
+        @media (max-width: 767px) {
+            padding-bottom: 20px;
+            font-size: 28px;
+        }
+        @media (max-width: 415px) {
+            font-size: 20px;
+        }
+    }
+
+    &__container {
+        @include flexbox();
+        @include align-items(baseline);
+        padding: 0 25px;
+        @media (max-width: 767px) {
+            @include flex-direction(column);
+            @include justify-content(center);
+            @include align-items(center);
+        }
+    }
+
+    &__item {
+        position: relative;
+        text-align: center;
+        flex: 1;
+        padding: 65px 105px;
+        @media (max-width: 1329px) {
+            padding: 35px 45px;
+        }
+        @media (max-width: 999px) {
+            padding: 15px 45px;
+        }
+        @media (max-width: 415px) {
+            padding: 10px 0;
+        }
+        &:nth-child(2) {
+            border-right: 1px solid $white;
+            border-left: 1px solid $white;
+            @media (max-width: 767px) {
+                border-right: none;
+                border-left: none;
+                &:before,
+                &:after {
+                    content : "";
+                    position: absolute;
+                    left    : 50%;
+                    bottom  : 0;
+                    height  : 1px;
+                    width   : 40%; 
+                    border-bottom:1px solid $white;
+                    @include translate3D(-50%, 0, 0);
+                }
+                &:after {
+                    bottom: auto;
+                    top: 0;
+                }
+            }
+
+        }
+
+        h2 {
+            font-family: $proximaNovaRegular;
+            font-size: 24px;
+            color: $white;
+            margin-bottom: 25px;
+            @media (max-width: 767px) {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+        }
+
+        p {
+            font-family: $proximaNovaRegular;
+            font-size: 18px;
+            color: $white;
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
+            @media (max-width: 415px) {
+                font-size: 14px;
+            }
+            
+        }
+    }
+
+    &__item-image {
+        margin: 0 auto 25px auto;
+        max-width: 50px;
+        @media (max-width: 767px) {
+            max-width: 30px;
+            margin: 0 auto 15px auto;
+        }
+        @media (max-width: 415px) {
+            max-width: 20px;
+            margin: 0 auto 5px auto;
+        }
+    }
+
+    &__help {
+        margin-top: 35px;
+        color: $white;
+        font-family: $proximaNovaRegular;
+        font-size: 16px;
+        a {
+            font-family: $proximaNovaBold;
+            text-decoration: none;
+            color: $white;
+        }
+        @media (max-width: 415px) {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    }
+
+    .button {
+        @media (max-width: 415px) {
+            font-size: 14px;
+            padding: 6px 22px;
+            margin: 10px;
+        }
+    }
 
 }
