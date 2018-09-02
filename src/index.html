@@ -21,27 +21,28 @@
             <img src="./images/spotify_logo.svg" alt="">
         </div>
     </nav>  
-    
+
     <div id="app">
 
 
         <section class="section first">
-                <div class="content absolute-center c-getstarted">
-                
-                    <div class="c-getstarted__spotify-logo">
-                        <img src="./images/spotify_logo.svg" alt="">
-                    </div>
-                
-                    <div class="c-getstarted__soundclash-logo">
-                        <img src="./images/soundclash_logo.svg" alt="">
-                    </div>
-        
-                    <div class="c-getstarted__maple">
-                        <span class="c-getstarted__divider"></span>
-                        <img src="./images/maple.png" alt="">
-                        <span class="c-getstarted__divider"></span>
-                    </div>
-        
+            <div class="content absolute-center c-getstarted">
+            
+                <div class="c-getstarted__spotify-logo">
+                    <img src="./images/spotify_logo.svg" alt="">
+                </div>
+            
+                <div class="c-getstarted__soundclash-logo">
+                    <img src="./images/soundclash_logo.svg" alt="">
+                </div>
+    
+                <div class="c-getstarted__maple">
+                    <span class="c-getstarted__divider"></span>
+                    <img src="./images/maple.png" alt="">
+                    <span class="c-getstarted__divider"></span>
+                </div>
+
+                <div class="c-getstarted__invite">
                     <p class="c-getstarted__punchline">
                         Think you can build the ultimate playlist?
                     </p>
@@ -52,7 +53,7 @@
                     </p>
         
                     <div class="c-getstarted__group-buttons">
-                        <button type="button" class="reset-button">
+                        <button id="getStarted" type="button" class="reset-button">
                             get started
                         </button>
                         
@@ -60,19 +61,39 @@
                             how it works
                         </button>
                     </div>
-        
-                </div>
-        
-                <div class="c-arrow__anchor" href="#">
-                    <a href="#">
-                            <img src="./images/arrow_down.svg" alt="">
-                    </a>
                 </div>
                 
+                <p class="c-getstarted__punchline second">Start with some songs</p>
+          
+                <div class="c-getstarted__input second">
+                    <button class="reset-button" type="button">
+                        <img src="./images/search.svg" alt="">
+                    </button>
+                    
+                    <input type="text" placeholder="Enter an artist, song or album">
+                    
+                    <button class="reset-button" type="button">
+                        <img src="./images/close_circle.svg" alt="">
+                    </button>
+                </div>
+
+                <p class="c-getstarted__cta second">
+                    Already have a Sound Clash playlist? 
+                    <span class="strong uppercase">log in</span>
+                </p>
+
+    
+            </div>
+    
+            <div class="c-arrow__anchor" href="#">
+                <a href="#">
+                        <img src="./images/arrow_down.svg" alt="">
+                </a>
+            </div>
         </section>
     
     
-        <section class="section second">
+        <section class="section second" id="howItWorks">
             <div class="content-full absolute-center text-center c-howitworks">
                 <h1 class="c-howitworks__title uppercase">how it works</h1>
     
@@ -216,6 +237,7 @@
 
 
     </div>
+
     <div id="app-menu">
   
             <a href="#" class="toggle-nav close">
@@ -233,7 +255,7 @@
                     <span>&copy; 2007-2015 Spotify AB</span>
                 </div>
             </div>
-        </div>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>

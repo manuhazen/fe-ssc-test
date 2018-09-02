@@ -1,13 +1,25 @@
 $(function() {
+
   $('.toggle-nav').click(function(e) {
     e.preventDefault();
     e.stopPropagation();
     toggleNav();
   });
 
+  $('#getStarted').click(function(e){
+    e.stopPropagation();
+    e.preventDefault();
+    
+    getStartedForm();
+  });
+
+  scrollFunction();
+  
   $(window).scroll(function(){
     scrollFunction();
-  })
+  });
+
+
 });
 
 
@@ -17,6 +29,11 @@ function toggleNav() {
   } else {
     $('#app-wrapper').addClass('show-nav');
   }
+}
+
+function getStartedForm() {
+    $('.second').addClass('show-second');
+    $('.c-getstarted__invite').addClass('show-second')
 }
 
 function scrollFunction() {
@@ -36,4 +53,4 @@ $(document).keyup(function() {
       toggleNav();
     }
   } 
-  });
+});

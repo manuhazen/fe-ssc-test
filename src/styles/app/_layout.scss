@@ -6,12 +6,18 @@
     &.show-nav {
         #app {
             @include translate3D(-350px, 0, 0);
+            @media (max-width: 545px) {
+                @include translate3D(-190px, 0, 0);
+            }
         }
         #app-menu__button {
             display: none;
         }
         #app-menu {
             @include translate3D(-350px, 0, 0);
+            @media (max-width: 545px) {
+                @include translate3D(-190px, 0, 0);
+            }
         }
     }
 }
@@ -45,6 +51,9 @@
         margin-left: 10px;
         width: 16px;
     }
+    @media (max-width: 545px) {
+        top: 5px;
+    }
 }
 
 #app-menu {
@@ -57,11 +66,17 @@
     padding: 25px;
     z-index: 510;
     @include transition(transform 300ms ease-in);
-
+    @media (max-width: 545px) {
+        width: 140px;
+        right: -190px;
+    }
     .close {
         width: 30px;
         display: block;
         margin-left: auto;
+        @media (max-width: 545px) {
+            width: 15px;
+        }
     }
 }
 
@@ -71,7 +86,7 @@
     left: 0;
     height: 75px;
     width: 100%;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(235,235,235,0.6);
     z-index: 400;
     padding: 0 25px;
     @include flexbox();
@@ -82,6 +97,18 @@
     }
     &.show {
         @include translate3D(0, 75px, 0);
+    }
+
+    @media (max-width: 545px) {
+        top: -35px;
+        left: 0;
+        height: 35px;
+        &.show {
+            @include translate3D(0, 35px, 0);
+        }
+        &__logo {
+            width: 90px;
+        }
     }
 }
 
@@ -99,6 +126,9 @@
             margin: 15px 0;
             &:hover {
                 text-decoration: underline;
+            }
+            @media (max-width: 545px) {
+                font-size: 16px;
             }
         }
 
@@ -155,6 +185,7 @@
         bottom: 25px;
         left: 50%;
         @include translate3D(-50%, 0, 0);
+        animation: bounce 2s infinite;
     }
 }
 
@@ -165,6 +196,70 @@
     @include align-items(center);
     @media (max-width: 767px) {
         padding: 0 45px;
+    }
+
+    .second {
+        opacity: 0;
+        visibility: hidden;
+        @include transition(all 300ms ease-out);
+        &.show-second {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__invite {
+        opacity: 1;
+        visibility: visible;
+        height: 0;
+        @include transition(all 300ms ease-out);
+        &.show-second {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+    }
+
+    &__input {
+        width: 75%;
+        padding: 16px 12px;
+        @include flexbox();
+        @include align-items(center);
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 12.5px 0 25px 0;
+
+        button {
+            height: 20px;
+            width: 20px;
+            color: $likeBlack;
+        }
+
+        input[type='text'] {
+            margin-left: 8px;
+            margin-right: auto;
+            border: none;
+            width: 85%;
+            color: $likeBlack;
+            font-family: 'ProximaNova-Regular';
+            font-size: 18px;
+            &::placeholder {
+                font-family: 'ProximaNova-Regular';
+                font-size: 17.2px;
+                color: $likeBlack;
+            }
+        }
+    }
+
+    &__cta {
+        margin: 12.5px 0;
+        font-family: 'ProximaNova-Regular';
+        font-size: 18px;
+        color: $white;
+        span {
+            font-family: 'ProximaNova-Bold'
+        }
     }
 
     &__spotify-logo {
@@ -214,6 +309,7 @@
         margin: 12.5px 0;
         @include flexbox();
         @include align-items(center);
+        @include justify-content(center);
         @media (max-width: 767px) {
             @include flex-direction(column);
         }
