@@ -7,104 +7,235 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 </head>
 <body>
-  <div id="app">
+  <div id="app-wrapper">
 
-    <section class="section first">
-        <div class="content absolute-center c-getstarted">
-        
-            <div class="c-getstarted__spotify-logo">
-                <img src="./images/spotify_logo.svg" alt="">
-            </div>
-        
-            <div class="c-getstarted__soundclash-logo">
-                <img src="./images/soundclash_logo.svg" alt="">
-            </div>
+    <button class="reset-button toggle-nav" id="app-menu__button" type="button">
+        menu 
+        <span>
+            <img src="./images/menu.svg" alt="">
+        </span>  
+    </button>
 
-            <div class="c-getstarted__maple">
-                <span class="c-getstarted__divider"></span>
-                <img src="./images/maple.png" alt="">
-                <span class="c-getstarted__divider"></span>
-            </div>
+    <nav class="c-nav">
+        <div class="c-nav__logo">
+            <img src="./images/spotify_logo.svg" alt="">
+        </div>
+    </nav>  
+    
+    <div id="app">
 
-            <p class="c-getstarted__punchline">
-                Think you can build the ultimate playlist?
-            </p>
 
-            <p class="c-getstarted__copy"> 
-                You could win an exclusive internship at Spotify Canada, plus weekly prize packs, free
-                Premium and tickets to summer concerts & festivals!
-            </p>
-
-            <div class="c-getstarted__group-buttons">
-                <button type="button" class="reset-button">
-                    get started
-                </button>
+        <section class="section first">
+                <div class="content absolute-center c-getstarted">
                 
-                <button type="button" class="reset-button">
-                    how it works
-                </button>
-            </div>
-
-        </div>
-
-        <div class="c-arrow__anchor" href="#">
-            <a href="#">
-                    <img src="./images/arrow_down.svg" alt="">
-            </a>
-        </div>
+                    <div class="c-getstarted__spotify-logo">
+                        <img src="./images/spotify_logo.svg" alt="">
+                    </div>
+                
+                    <div class="c-getstarted__soundclash-logo">
+                        <img src="./images/soundclash_logo.svg" alt="">
+                    </div>
         
-    </section>
-
-
-    <section class="section second">
-        <div class="content-full absolute-center text-center c-howitworks">
-            <h1 class="c-howitworks__title uppercase">how it works</h1>
-
-            <div class="c-howitworks__container">
-                <div class="c-howitworks__item">
-                    <div class="c-howitworks__item-image">
-                        <img src="./images/create.svg" alt="">
+                    <div class="c-getstarted__maple">
+                        <span class="c-getstarted__divider"></span>
+                        <img src="./images/maple.png" alt="">
+                        <span class="c-getstarted__divider"></span>
                     </div>
-                    <h2 class="uppercase">1. create</h2>
-                    <p>a 15-track playlist that deﬁnes your
-                        student life.</p>
+        
+                    <p class="c-getstarted__punchline">
+                        Think you can build the ultimate playlist?
+                    </p>
+        
+                    <p class="c-getstarted__copy"> 
+                        You could win an exclusive internship at Spotify Canada, plus weekly prize packs, free
+                        Premium and tickets to summer concerts & festivals!
+                    </p>
+        
+                    <div class="c-getstarted__group-buttons">
+                        <button type="button" class="reset-button">
+                            get started
+                        </button>
+                        
+                        <button type="button" class="reset-button">
+                            how it works
+                        </button>
+                    </div>
+        
                 </div>
-                <div class="c-howitworks__item">
-                    <div class="c-howitworks__item-image">
-                        <img src="./images/register.svg" alt="">
-                    </div>
-                    <h2 class="uppercase">2. register</h2>
-                    <p>your playlist on Sound Clash using your
-                        Spotify username and password.</p>
+        
+                <div class="c-arrow__anchor" href="#">
+                    <a href="#">
+                            <img src="./images/arrow_down.svg" alt="">
+                    </a>
                 </div>
-                <div class="c-howitworks__item">
-                    <div class="c-howitworks__item-image">
-                        <img src="./images/share.svg" alt="">
+                
+        </section>
+    
+    
+        <section class="section second">
+            <div class="content-full absolute-center text-center c-howitworks">
+                <h1 class="c-howitworks__title uppercase">how it works</h1>
+    
+                <div class="c-howitworks__container">
+                    <div class="c-howitworks__item">
+                        <div class="c-howitworks__item-image">
+                            <img src="./images/create.svg" alt="">
+                        </div>
+                        <h2 class="uppercase">1. create</h2>
+                        <p>a 15-track playlist that deﬁnes your
+                            student life.</p>
                     </div>
-                    <h2 class="uppercase">3. share</h2>
-                    <p>your playlist and get followers. Gain 25
-                        followers to get your Spotify Prize Pack. The
-                        owners of the 5 most-followed playlists overall
-                        will interview for the internship.</p>
+                    <div class="c-howitworks__item">
+                        <div class="c-howitworks__item-image">
+                            <img src="./images/register.svg" alt="">
+                        </div>
+                        <h2 class="uppercase">2. register</h2>
+                        <p>your playlist on Sound Clash using your
+                            Spotify username and password.</p>
+                    </div>
+                    <div class="c-howitworks__item">
+                        <div class="c-howitworks__item-image">
+                            <img src="./images/share.svg" alt="">
+                        </div>
+                        <h2 class="uppercase">3. share</h2>
+                        <p>your playlist and get followers. Gain 25
+                            followers to get your Spotify Prize Pack. The
+                            owners of the 5 most-followed playlists overall
+                            will interview for the internship.</p>
+                    </div>
+                </div>
+    
+                <button type="button" class="uppercase reset-button button">get started</button>
+    
+                <p class="c-howitworks__help">Need more info? Check out our <a href="#">FAQ.</a></p>
+            </div>
+    
+            <div class="c-arrow__anchor" href="#">
+                <a href="#">
+                        <img src="./images/arrow_down.svg" alt="">
+                </a>
+            </div>
+        </section>
+    
+    
+        <section class="section third">
+            <div class="content absolute-center text-center c-leaderboard">
+                <h1 class="c-leaderboard__title">leaderboard</h1> 
+    
+                <p class="c-leaderboard__punchline">Share your playlist everywhere to get the most followers!</p>
+                
+                <button class="c-leaderboard__filter reset-button button">filter</button>
+    
+                <ul class="c-leaderboard__tabs">
+                    <li class="c-leaderboard__tab active hide-on-mobile">
+                        <a href=":;">Hot This Week</a>
+                    </li>
+                    <li class="c-leaderboard__tab">
+                        <a href=":;">All Time</a>
+                    </li>
+                </ul>
+    
+                <div id="content-1" class="c-leaderboard__tab-content text-center">
+                    <div class="c-leaderboard__tab-item">
+                        <div class="c-leaderboard__tab-rank">
+                            <div class="c-leaderboard__tab-rank-position">1</div>
+    
+                            <div class="divider">
+    
+                            </div>
+                            <div>
+                                <img src="./images/arrow_green_up.svg" alt="">
+                                <span class="c-leaderboard__tab-rank-up">+3</span>
+                            </div>
+                        </div>
+    
+                        <div class="c-leaderboard__tab-image">
+                            <img class="c-leaderboard__tab-image__cover" src="./images/the_boat_club.png" alt="">
+                            <img class="c-leaderboard__tab-image__playbutton" src="./images/play.svg" alt="">
+                        </div>
+    
+                        <div class="c-leaderboard__tab-text">
+                            <p class="c-leaderboard__tab-text__title">The Boat Club</p>
+                            <p class="c-leaderboard__tab-text__artist">Oxford Brookes</p>
+                            <button type="button" class="reset-button button">go to playlist</button>
+                        </div>
+                    </div>
+    
+                    <div class="c-leaderboard__tab-item">
+                        <div class="c-leaderboard__tab-rank">
+                            <div class="c-leaderboard__tab-rank-position">2</div>
+    
+                            <div class="divider">
+                                
+                            </div>
+                            <div>
+                                <img src="./images/arrow_red_down.svg" alt="">
+                                <span class="c-leaderboard__tab-rank-down">-1</span>
+                            </div>
+                        </div>
+    
+                        <div class="c-leaderboard__tab-image">
+                            <img class="c-leaderboard__tab-image__cover" src="./images/curc.png" alt="">
+                            <img class="c-leaderboard__tab-image__playbutton" src="./images/play.svg" alt="">
+                        </div>
+    
+                        <div class="c-leaderboard__tab-text">
+                            <p class="c-leaderboard__tab-text__title">The Boat Club</p>
+                            <p class="c-leaderboard__tab-text__artist">Oxford Brookes</p>
+                            <button type="button" class="reset-button button">go to playlist</button>
+                        </div>
+                    </div>
+    
+                    <div class="c-leaderboard__tab-item">
+                        <div class="c-leaderboard__tab-rank">
+                            <div class="c-leaderboard__tab-rank-position">3</div>
+    
+                            <div class="divider">
+                                
+                            </div>
+                            <div>
+                                <img src="./images/dot_yellow.svg" alt="">
+                            </div>
+                        </div>
+    
+                        <div class="c-leaderboard__tab-image">
+                            <img class="c-leaderboard__tab-image__cover" src="./images/projectd.png" alt="">
+                            <img class="c-leaderboard__tab-image__playbutton" src="./images/play.svg" alt="">
+                        </div>
+    
+                        <div class="c-leaderboard__tab-text">
+                            <p class="c-leaderboard__tab-text__title">The Boat Club</p>
+                            <p class="c-leaderboard__tab-text__artist">Oxford Brookes</p>
+                            <button type="button" class="reset-button button">go to playlist</button>
+                        </div>
+                    </div>
+    
                 </div>
             </div>
+        </section>
 
-            <button type="button" class="uppercase reset-button button">get started</button>
 
-            <p class="c-howitworks__help">Need more info? Check out our <a href="#">FAQ.</a></p>
-        </div>
-
-        <div class="c-arrow__anchor" href="#">
-            <a href="#">
-                    <img src="./images/arrow_down.svg" alt="">
+    </div>
+    <div id="app-menu">
+  
+            <a href="#" class="toggle-nav close">
+                <img src="./images/close.svg" alt="">
             </a>
+
+            <div class="app-menu__inner">
+                <a href="#" class="app-menu__inner-item">home</a>
+                <a href="#" class="app-menu__inner-item">leaderboard</a>
+                <a href="#" class="app-menu__inner-item">prizes</a>
+                <a href="#" class="app-menu__inner-item">f.a.q</a>
+                <a href="#" class="app-menu__inner-item">officiales rules</a>
+                
+                <div>
+                    <span>&copy; 2007-2015 Spotify AB</span>
+                </div>
+            </div>
         </div>
-    </section>
-
-
-    <section class="section third">
-
-    </section>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 </body>
 </html>

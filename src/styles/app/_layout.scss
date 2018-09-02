@@ -1,9 +1,128 @@
+#app-wrapper{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    &.show-nav {
+        #app {
+            @include translate3D(-350px, 0, 0);
+        }
+        #app-menu__button {
+            display: none;
+        }
+        #app-menu {
+            @include translate3D(-350px, 0, 0);
+        }
+    }
+}
+
+#app {
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    @include translate3D(0,0,0);
+    @include transition(transform 300ms ease-in);
+}
+
+#app-menu__button {
+    @include flexbox();
+    @include align-items(center);
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    top: 21px;
+    right: 25px;
+    text-decoration: none;
+    font-family: $proximaNovaBold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $white;
+    z-index: 500;
+    opacity: 1;
+    visibility: visible;
+    @include transition(opacity 300ms ease-out);
+    span {
+        margin-left: 10px;
+        width: 16px;
+    }
+}
+
+#app-menu {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -350px;
+    background: $white;
+    padding: 25px;
+    z-index: 510;
+    @include transition(transform 300ms ease-in);
+
+    .close {
+        width: 30px;
+        display: block;
+        margin-left: auto;
+    }
+}
+
+.c-nav {
+    position: fixed;
+    top: -75px;
+    left: 0;
+    height: 75px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.4);
+    z-index: 400;
+    padding: 0 25px;
+    @include flexbox();
+    @include align-items(center);
+    @include transition(all 300ms ease-out);
+    &__logo {
+        width: 140px;
+    }
+    &.show {
+        @include translate3D(0, 75px, 0);
+    }
+}
+
+.app-menu {
+    &__inner {
+        @include flexbox();
+        @include flex-direction(column);
+        height: 90vh;
+        &-item {
+            text-decoration: none;
+            font-family: $proximaNovaRegular;
+            text-transform: uppercase;
+            font-size: 24px;
+            color: $likeBlack;
+            margin: 15px 0;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        div {
+            margin-top: auto;
+            font-family: $proximaNovaRegular;
+            font-size: 12px;
+            color: $likeBlack;
+        }
+    }
+}
+
 .section {
     height: 100vh;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    @media (max-width: 767px) {
+        padding: 60px 0;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+    }
     &.first {
         background-image: url('../images/background1.jpg');
     }
@@ -162,7 +281,7 @@
             padding: 15px 45px;
         }
         @media (max-width: 415px) {
-            padding: 10px 0;
+            padding: 20px 0;
         }
         &:nth-child(2) {
             border-right: 1px solid $white;
@@ -177,7 +296,7 @@
                     left    : 50%;
                     bottom  : 0;
                     height  : 1px;
-                    width   : 40%; 
+                    width   : 50%; 
                     border-bottom:1px solid $white;
                     @include translate3D(-50%, 0, 0);
                 }
@@ -251,4 +370,206 @@
         }
     }
 
+}
+
+.c-leaderboard {
+    @media (max-width: 499px) {
+        padding: 0 25px;
+    }
+    &__title {
+        font-family: $proximaNovaLight;
+        font-size: 40px;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        @media (max-width: 354px) {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__punchline {
+        font-family: $proximaNovaRegular;
+        color: $white;
+        font-size: 18px;
+        margin-bottom: 30px;
+        @media (max-width: 354px) {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__filter {
+        margin-bottom: 30px;
+        @media (max-width: 354px) {
+            font-size: 16px;
+            margin: 7px 7px 20px 7px;
+            padding: 6px 18px;
+        }
+    }
+
+
+    &__tabs {
+        @include flexbox();
+        @include flex-direction(row);
+        @media (max-width: 767px) {
+            @include justify-content(center);
+        }
+        padding: 0 12px 12px 12px;
+        border-bottom: 1px solid $white;
+
+        a {
+            text-decoration: none;
+            color: $white;
+            font-family: $proximaNovaRegular;
+            font-size: 24px;
+            @media (max-width: 354px) {
+                font-size: 16px;
+            }
+        }
+
+
+    }
+
+    &__tab {
+        width: 33%;
+        &.active {
+            position: relative;
+            font-family: $proximaNovaSemiBold;
+            &:after {
+                content: "";
+                border-bottom: 7px solid #FFFFFF;
+                position: absolute;
+                top: 23px;
+                height: 7px;
+                width: 80%;
+                left: -12px;
+            }
+        }
+        &:first-child {
+            text-align: left;
+        }
+        &:last-child {
+            text-align: center;
+        }
+    }
+
+    &__tab-rank {
+        margin: 0 12.5px;
+        @media (max-width: 401px) {
+            margin: 0 7.5px;
+        }
+        @include flexbox();
+        @include align-items(center);
+        @include flex-direction(column);
+        @include justify-content(center);
+
+        div {
+            width: 100%;
+        }
+        img {
+            max-width: 20px;
+        }
+        span {
+            font-family: $proximaNovaSemiBold;
+            font-size: 16px;
+
+        }
+        &-up {
+            color: $green;
+        }
+        &-down {
+            color: $red;
+        }
+        &-position {
+            font-family: $proximaNovaRegular;
+            color: $white;
+            font-size: 24px;
+        }
+
+        .divider {
+            margin: 20px 0;
+            height: 1px;
+            width: 100%;
+            border-bottom: 1px solid #88898C;
+        }
+    }
+
+    &__tab-item {
+        @include flexbox();
+        margin-top: 15px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $white;
+    }
+
+    &__tab-image {
+        max-width: 130px;
+        position: relative;
+        margin: 0 12.5px;
+        cursor: pointer;
+        @media (max-width: 401px) {
+            width: 100px;
+            margin: 0 6px;
+            &__cover {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__playbutton {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 30px;
+        }
+    }
+
+    &__tab-text {
+        text-align: left;
+        margin: 0 12.5px;
+        @media (max-width: 401px) {
+            text-align: left;
+            margin: 0 7.5px;
+        }
+        p {
+            margin: 6px 0;
+            @media (max-width: 464px) {
+                font-size: 20px;
+            }
+            @media (max-width: 432px) {
+                font-size: 16px;
+            }
+
+        }
+
+        &__title {
+            font-family: $proximaNovaSemiBold;
+            font-size: 24px;
+            color: $white;
+        }
+        &__artist {
+            font-family: $proximaNovaRegular;
+            font-size: 24px;
+            color: $white;
+            @media (max-width: 354px) {
+                    font-size: 14px !important;
+            }
+
+        }
+
+        button {
+            font-family: $proximaNovaSemiBold;
+            font-size: 10px;
+            padding: 6px 12px;
+            margin-top: 12px;
+            @media (max-width: 464px) {
+                margin-left: 0;
+            }
+            @media (max-width: 354px) {
+                padding: 3px 5px;
+            }
+        }
+    }
 }

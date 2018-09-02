@@ -1,8 +1,11 @@
 .absolute-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    @include translate3D(-50%, -50%, 0);
+
+    @media (min-width: 768px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate3D(-50%, -50%, 0);
+    }
 }
 
 .reset-button {
@@ -47,4 +50,14 @@
     @media (max-width: 767px) {
         margin: 12.5px;
     }
+}
+
+.hide-on-mobile {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.margin-b-a {
+    margin-bottom: auto;
 }
