@@ -1,7 +1,7 @@
 Soluciones GBH - Frontend Test
 ==============================
 
-You can access to the live site here: [Live Demo](https://testgbhemmanuel.netlify.com)
+**You can access to the live site here:** [Live Demo](https://testgbhemmanuel.netlify.com)
 
 Applicant: Emmanuel Jimenez Perez.
 
