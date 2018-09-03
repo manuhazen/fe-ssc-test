@@ -1,7 +1,7 @@
 Soluciones GBH - Frontend Test
 ==============================
 
-[Live Demo](https://testgbhemmanuel.netlify.com)
+You can access to the live site here: [Live Demo](https://testgbhemmanuel.netlify.com)
 
 Applicant: Emmanuel Jimenez Perez.
 
@@ -14,7 +14,7 @@ Applicant: Emmanuel Jimenez Perez.
 
 ### How to run it
 
-Required Node.JS Installed.
+*Required Node.JS Installed.*
 
   * Clone the Repository `$ git clone https://github.com/manuhazen/testgbh.git`
   * Get into the folder `cd /fe-ssc-test`
