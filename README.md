@@ -1,7 +1,7 @@
 Soluciones GBH - Frontend Test
 ==============================
 
-[https://testgbhemmanuel.netlify.com/](Live Demo)
+[Live Demo](https://testgbhemmanuel.netlify.com)
 
 Applicant: Emmanuel Jimenez Perez.
 
@@ -16,9 +16,8 @@ Applicant: Emmanuel Jimenez Perez.
 
 Required Node.JS Installed.
 
-  * Clone the Repository
-  * Get into the folder
-  * `cd /fe-ssc-test`
+  * Clone the Repository `$ git clone https://github.com/manuhazen/testgbh.git`
+  * Get into the folder `cd /fe-ssc-test`
   * `npm install` / `yarn install`
   * `npm run dev` / `yarn dev`
 
@@ -30,7 +29,7 @@ If you want a Production Version of the site:
 All the site is powered in a Webpack workflow with optimization for the CSS and JavaScript with Transpiler. For the events 
 i used jQuery events and used BEM to the naming conventions. 
 
-*Proposed Behaviours*
+**Proposed Behaviours**
 
   When you click the "Get started" button in the first section, the form show up and the get started text dissapear.
 
