@@ -16,7 +16,7 @@ Applicant: Emmanuel Jimenez Perez.
 
 *Required Node.JS Installed.*
 
-  * Clone the Repository `$ git clone https://github.com/manuhazen/testgbh.git`
+  * Clone the Repository `$ git clone https://github.com/manuhazen/fe-ssc-test.git`
   * Get into the folder `cd /fe-ssc-test`
   * `npm install` / `yarn install`
   * `npm run dev` / `yarn dev`
